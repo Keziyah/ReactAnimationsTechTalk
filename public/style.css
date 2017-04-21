@@ -1,0 +1,62 @@
+.image {
+    height: 300px; 
+    width: 300px; 
+}
+
+/*
+
+anim-appear: where the animation starts
+anim-appear anim appear active: how the animation works and where it ends
+
+*/
+
+
+/*anim transitions*/
+/*Notice how I have to set the seconds both here and in the render method of the component*/
+
+/*transitionAppear*/
+.anim-appear {
+    opacity: 0.01;
+}
+
+/*transitionAppearTimeOut*/
+
+/*transition appear is for first loading the page. 
+while transion enter is for things that load after it. */
+
+.anim-appear.anim-appear-active {
+    opacity: 2; 
+    transition: opacity 5s ease-in;
+}
+
+/*TransitionEnter*/
+/*When the element first appears, in what condition should it start?*/
+.anim-enter {
+    opacity: 0.01; 
+}
+
+/*At what point should the animation stop before it renders as normal?
+Also, how long should this animation take, and how should it animate?
+So here, the animation will ease in, take 3s to get to opacity 0.8, then
+it will render as normal(with full opacity)*/
+.anim-enter.anim-enter-active {
+    opacity: 0.8; 
+    transition: opacity 3s ease-in; 
+}
+
+/*start the leaving transition*/
+.anim-leave {
+    opacity: 2
+}
+
+/*how to end the leaving transition leaving transition*/
+.anim-leave.anim-leave-active {
+    opacity: 0.01; 
+    transition: opacity 3s ease-out; 
+}
+
+.box {
+    width: 100; 
+    height: 100; 
+    background-color: blue; 
+}
