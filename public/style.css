@@ -1,7 +1,137 @@
-.image {
-    height: 300px; 
-    width: 300px; 
+/*******************************************/
+/*GENERAL STYLES*/
+/*******************************************/
+
+body {
+    background-color: #edefec
 }
+
+
+/*******************************************/
+/*NAVBAR */
+/*******************************************/
+
+.navbar-default {
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);  
+    border: none; 
+    color: #fdfdfd; 
+}
+
+.navbar-brand {
+    padding-top: 2px; 
+}
+
+.navbar-right > li {
+    margin-left: 20px; 
+    margin-top: 10px; 
+}
+
+#userImg {
+    border-radius: 50%; 
+    border: 2px solid #333;
+}
+/*******************************************/
+/*HERO DIV*/
+/*******************************************/
+
+#heroimg {
+    background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 122, 135, 0.45), 
+      rgba(0, 122, 135, 0.45)
+
+    ),
+    /* bottom, image */
+    url(hero.png); 
+    height: 500px; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin-top: -60px; 
+}
+
+#hero-text {
+    padding-top: 9em; 
+    margin-left: 10em; 
+    margin: auto;  
+    color: #fdfdfd; 
+}
+
+#hero-text h1 {
+    font-size: 4em; 
+    text-transform: uppercase; 
+}
+
+#hero-text h4 {
+    margin-top: 1.5em; 
+    width: 35em; 
+}
+
+/*******************************************/
+/*SEARCH COMPONENT*/
+/*******************************************/
+
+#search-container {
+    margin-top: 5em; 
+}
+
+#search-container .col-md-10 {
+    margin-left: 22em;   
+}
+
+#search-container .col-md-2 {
+    padding: 0
+}
+
+#search-container input {
+    height: 35px; 
+}
+
+#search-container button {
+    width: 125px;
+    height: 35px;   
+}
+
+/*******************************************/
+/*HAIR TUTORIAL */
+/*******************************************/
+
+#tutorial-header {
+    margin-left: 25%;  
+}
+
+#hair-tutorial-header {
+    font-size: 4em; 
+}
+
+#weave {
+    font-style: italic
+}
+
+.tutorial-container {
+    width: 650px; 
+    margin-left: 30%; 
+    margin-top: 3%; 
+}
+
+.tutorial-image {
+    border: 5px solid #333; 
+}
+
+/*******************************************/
+/*******************************************/
+/*******************************************/
+/*******************************************/
+/*******************************************/
+/*OTHER STUFFFFF*/
+/*******************************************/
+/*******************************************/
+/*******************************************/
+/*******************************************/
+
+
+/*ANIMATIONS FOR PRACTICE */
 
 /*
 
@@ -9,6 +139,11 @@ anim-appear: where the animation starts
 anim-appear anim appear active: how the animation works and where it ends
 
 */
+
+.image {
+    height: 300px; 
+    width: 300px; 
+}
 
 
 /*anim transitions*/
@@ -55,8 +190,7 @@ it will render as normal(with full opacity)*/
     transition: opacity 3s ease-out; 
 }
 
-.box {
-    width: 100; 
-    height: 100; 
-    background-color: blue; 
+.box, .circle {
+    width: 400; 
+    height: 400; 
 }

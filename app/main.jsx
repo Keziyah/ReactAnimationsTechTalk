@@ -5,7 +5,7 @@ import {render} from 'react-dom'
 import {connect, Provider} from 'react-redux'
 
 import store from './store'
-import Home from './components/Home'
+import App from './components/App'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
@@ -13,7 +13,7 @@ import NotFound from './components/NotFound'
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path="/" component={Home}/>
+      <Route path="/" component={App}/>
       <Route path='*' component={NotFound} />
     </Router>
   </Provider>,
