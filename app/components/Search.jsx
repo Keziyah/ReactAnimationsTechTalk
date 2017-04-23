@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import {Link} from 'react-router'
 
 class Search extends Component {
     render() {
@@ -19,7 +20,7 @@ class Search extends Component {
                         <input type="text" placeholder="Return"/>
                     </div>
                     <div className="col-md-2">
-                       <button>Find hair</button>
+                       <Link to="/results"><button>Find hair</button></Link>
                     </div>
                     </div>
                 </div>

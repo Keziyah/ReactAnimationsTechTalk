@@ -13,7 +13,6 @@ class App extends Component {
                     <Hero />
                     <HairTutorial />
                 </div>
-                <Footer />
             </div>
         )
     }

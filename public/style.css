@@ -19,9 +19,9 @@ body:after {
 
 .navbar-default {
     margin-bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);  
+    background-color: rgba(0, 0, 0, 0);  
     border: none; 
-    color: #fdfdfd; 
+    color: #cc002d; 
 }
 
 .navbar-brand {
@@ -161,6 +161,41 @@ p span.spacer {
 footer {
     position: absolute; 
 }
+
+
+/*******************************************/
+/*FOOTER */
+/*******************************************/
+
+/*Amazing footer styles from stack overflow*/
+.footer {
+    bottom: 0;
+    margin: 0 auto !important;
+    text-align: center;
+    width: 100% !important;
+    height: 60px;
+    position: absolute; 
+    background-color: rgba(0, 122, 135, 0.2)
+}
+
+.footer img {
+    display: inline-block; 
+}
+
+.footer p {
+    margin-bottom: 0; 
+}
+
+/*******************************************/
+/*RESULTS PAGE */
+/*******************************************/
+
+
+.my-card-container .mdc-card {
+  height: 350px;
+  width: 350px;
+}
+
 
 /*******************************************/
 /*******************************************/
