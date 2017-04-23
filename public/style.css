@@ -6,6 +6,12 @@ body {
     background-color: #edefec
 }
 
+body:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
 
 /*******************************************/
 /*NAVBAR */
@@ -98,11 +104,11 @@ body {
 /*******************************************/
 
 #tutorial-header {
-    margin-left: 25%;  
+    margin-left: 15%;  
 }
 
 #hair-tutorial-header {
-    font-size: 4em; 
+    font-size: 2em; 
 }
 
 #weave {
@@ -110,13 +116,50 @@ body {
 }
 
 .tutorial-container {
+    position: relative; 
     width: 650px; 
     margin-left: 30%; 
     margin-top: 3%; 
 }
 
+
+
 .tutorial-image {
-    border: 5px solid #333; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    border: 5px solid rgb(0, 122, 135); 
+}
+
+.tutorial-text {
+  z-index: 100;
+  position: absolute;
+  color: #fdfdfd;
+  font-size: 2em;
+  font-weight: bold;
+  left: 20px;
+  top: 0px;
+  text-transform: uppercase; 
+}
+
+.tutorial-p {
+  z-index: 100;
+  position: absolute;
+  color: #fdfdfd;
+  font-size: 1.3em;
+  left: 4px;
+  top: 350px;
+  width: 415px; 
+  height: 70px; 
+  background-color: rgba(0, 0, 0, 0.6)
+}
+
+p span.spacer {
+   padding:0 5px;
+}
+
+footer {
+    position: absolute; 
 }
 
 /*******************************************/

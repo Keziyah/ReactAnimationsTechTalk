@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Navbar from './Navbar'
 import Hero from './Hero'
 import HairTutorial from './HairTutorial'
+import Footer from './Footer'
 
 class App extends Component {
     render() {
@@ -12,6 +13,7 @@ class App extends Component {
                     <Hero />
                     <HairTutorial />
                 </div>
+                <Footer />
             </div>
         )
     }
