@@ -4,8 +4,8 @@ class Footer extends Component {
     render() {
         return (
             <footer className="footer">
-                <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-                    <div class="container">
+                <nav className="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                    <div className="container">
                         <img alt="Brand" className="logo" src="logo.png" />
                         <p className="text-muted">
                             Copyright 2017 Hairbnb.

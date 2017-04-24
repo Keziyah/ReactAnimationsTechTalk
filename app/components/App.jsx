@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
 import Hero from './Hero'
-import HairTutorial from './HairTutorial'
+import HowTo from './HowTo'
 import Footer from './Footer'
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
                 <Navbar />
                 <div>
                     <Hero />
-                    <HairTutorial />
+                    <HowTo />
                 </div>
             </div>
         )

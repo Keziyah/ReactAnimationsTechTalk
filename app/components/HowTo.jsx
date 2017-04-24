@@ -1,22 +1,30 @@
 import React, { Component } from 'react'
+import { Screen, ScreenSlice } from 'react-screen';
 
 //This is the bottom half of the Hairbnb home page. 
 //It has a basic how-to on how the service works. 
 
 //Here, I need to render these animated tutorial components. 
-    //1. Find hair by type, color, style, etc and pay for it online. 
+//1. Find hair by type, color, style, etc and pay for it online. 
 //pic src https://pixabay.com/en/beautiful-colorful-colourful-1869208/ 
-    //2. Meet up with your host, who will cut and wash their hair to give you.
-        //Hairbnb ensures that hosts have clean, lice-free hair in good condition. 
+//2. Meet up with your host, who will cut and wash their hair to give you.
+//Hairbnb ensures that hosts have clean, lice-free hair in good condition. 
 //pic src https://pixabay.com/en/friends-female-nature-girls-summer-2159190/ 
-    //3. Wear your new hair any way you want. As extensions, as a wig, etc. 
-        //Return it to your host to avoid paying a late fee. 
-    //https://pixabay.com/en/woman-face-curly-hair-fashion-1439909/
-    //4. Get compliments from your family and friends on your new bomb ass hairdo. 
-    //https://pixabay.com/en/afro-hair-natural-fashion-hippie-747801/
+//3. Wear your new hair any way you want. As extensions, as a wig, etc. 
+//Return it to your host to avoid paying a late fee. 
+//https://pixabay.com/en/woman-face-curly-hair-fashion-1439909/
+//4. Get compliments from your family and friends on your new bomb ass hairdo. 
+//https://pixabay.com/en/afro-hair-natural-fashion-hippie-747801/
 
+// class HowToSlider extends Component {
+//     render() {
+//         return (
 
-class HairTutorial extends Component {
+//         );
+//     }
+// }
+
+class HowTo extends Component {
     render() {
         //Card 1
         const image1 = "Tutorial1.png"
@@ -28,7 +36,7 @@ class HairTutorial extends Component {
         const paragraph2 = "Meet up with your host, who will cut and wash their hair to give you."
         //Card 3
         const image3 = "Tutorial3.png"
-        const header3="3. Do you."
+        const header3 = "3. Do you."
         const paragraph3 = "Wear your new hair any way you want. As extensions, as a wig, etc."
         //Card 4
         const image4 = "Tutorial4.png"
@@ -39,15 +47,28 @@ class HairTutorial extends Component {
                 <div id="tutorial-header">
                     <h1 id="hair-tutorial-header">Hairbnb is revolutionizing the way you shop for hair. Here's how. </h1>
                 </div>
-                <TutorialContainer image={image1} header={header1} paragraph={paragraph1}/>
+                <Screen>
+                    <ScreenSlice>
+                        <HowToCard image={image1} header={header1} paragraph={paragraph1}/>
+                    </ScreenSlice>
+                    <ScreenSlice>
+                         <HowToCard image={image2} header={header2} paragraph={paragraph2}/>
+                    </ScreenSlice>
+                    <ScreenSlice>
+                        <HowToCard image={image3} header={header3} paragraph={paragraph3}/>
+                    </ScreenSlice>
+                    <ScreenSlice>
+                        <HowToCard image={image4} header={header4} paragraph={paragraph4}/>
+                    </ScreenSlice>
+                </Screen>
             </div>
         )
     }
 }
-export default HairTutorial 
+export default HowTo;
 
 
-class TutorialContainer extends Component {
+class HowToCard extends Component {
     constructor(props) {
         super(props)
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router'
+import { Link } from 'react-router'
 
 class Navbar extends Component {
     render() {
@@ -13,17 +13,19 @@ class Navbar extends Component {
                     </div>
                     <div>
                         <ul className="nav navbar-nav navbar-right">
-                            <li>Messages</li>
+                            <li><span className="mdl-badge" data-badge="4">Inbox</span></li>
                             <li>Help</li>
                             <li>
-                                <button>  Rent Your Hair</button>
+                                <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                                    Rent Your Hair
+                                </button>
                             </li>
                             <li>
                                 <img src="UserImg.png" id="userImg" alt="current logged in user" />
                             </li>
                         </ul>
-                        </div>
                     </div>
+                </div>
             </nav>
         )
     }

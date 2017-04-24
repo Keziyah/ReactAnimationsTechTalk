@@ -19,9 +19,9 @@ body:after {
 
 .navbar-default {
     margin-bottom: 0;
-    background-color: rgba(0, 0, 0, 0);  
+    background-color: rgba(1, 97, 101, 0.2);  
     border: none; 
-    color: #cc002d; 
+    color: #edefec;   
 }
 
 .navbar-brand {
@@ -31,11 +31,18 @@ body:after {
 .navbar-right > li {
     margin-left: 20px; 
     margin-top: 10px; 
+    font-weight: bold;
+    font-size: 1em;
 }
 
 #userImg {
     border-radius: 50%; 
     border: 2px solid #333;
+}
+
+.navbar-right button {
+    height: 30px; 
+    background-color: #cc002d; 
 }
 /*******************************************/
 /*HERO DIV*/
@@ -97,6 +104,16 @@ body:after {
 #search-container button {
     width: 125px;
     height: 35px;   
+}
+
+/*search icon button*/
+
+#icon-search {
+    background-color: rgba(0, 122, 135, 0.2); 
+    font-size: 3em ; 
+    height: 70px ;  
+    color: #cc002d; 
+    margin-left: 50%; 
 }
 
 /*******************************************/
@@ -191,9 +208,86 @@ footer {
 /*******************************************/
 
 
-.my-card-container .mdc-card {
-  height: 350px;
-  width: 350px;
+.demo-card-square.mdl-card {
+  width: 280px;
+  height: 250px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('Tutorial2.png') bottom right 15% no-repeat #edefec;
+}
+
+.price {
+    font-weight: bold; 
+}
+
+.mdl-card__supporting-text {
+    padding: 8px 5px; 
+}
+.mdl-card__supporting-text p{
+    margin-bottom: 0; 
+    width: 260px; 
+}
+.mdl-card__actions {
+    font-size: 10;
+}
+
+#pic-name {
+    width:280px; 
+    height:60px; 
+    margin-top: 200px; 
+}
+
+#pic-name h2 {
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+#pic-name img {
+     margin-left: 10px; 
+     margin-top: -20px; 
+     border-radius: 50%; 
+     border: 3px solid #333; 
+}
+
+.mdl-card__actions p {
+    margin-bottom: 0; 
+    font-size: 10; 
+}
+
+.mdl-card--border .glyphicon-heart {
+    color: #cc002d; 
+    font-size: 1em; 
+}
+
+#map {
+    border: 3px solid #333; 
+}
+
+/*******************************************/
+/*REPORT CARD*/
+/*******************************************/
+
+.demo-card-event.mdl-card.mdl-shadow--2dp {
+  width: 280px;
+  height: 250px;
+}
+
+.demo-card-event.mdl-card.mdl-shadow--2dp h4 {
+    margin-top: -50px; 
+    text-align: center; 
+    margin-left: 50px; 
+    font-weight: bold; 
+}
+
+.demo-card-event.mdl-card.mdl-shadow--2dp i {
+    font-size: 4em; 
+    color: red; 
+}
+
+#submit-report {
+    width: 100px; 
+    background-color: rgb(0, 122, 135)
 }
 
 
@@ -223,6 +317,39 @@ anim-appear anim appear active: how the animation works and where it ends
     width: 300px; 
 }
 
+/*For the tutorial*/
+
+/*Keep consistency with class names
+**Use "appear" for initial loading of the page
+**Use "enter" for components that load after the page load
+    such as those that load in response to an event. 
+**The transition seconds in CSS should match the miliseconds passed into
+    CSSTransitionGroup
+*/
+
+/*Conditions for when the search form first appears.*/
+.search-enter {
+    opacity: 0.01; 
+}
+
+/*Specify length of time and end result of transition, before
+the search component renders as normal*/
+
+.search-enter.search-enter-active {
+    opacity: 2; 
+    transition: opacity 1s ease-in;
+}
+
+/*Conditions for when the search icon first leaves*/
+.search-leave {
+    opacity: 2
+}
+
+/*Specify how the search icon should leave before it dissapears*/
+.search-leave.anim-leave-active {
+    opacity: 0.01; 
+    transition: opacity 1s ease-out; 
+}
 
 /*anim transitions*/
 /*Notice how I have to set the seconds both here and in the render method of the component*/

@@ -6,6 +6,8 @@ import {connect, Provider} from 'react-redux'
 
 import store from './store'
 import App from './components/App'
+import Practice5 from './components/Practice5'
+import FadesUp from './components/FadesUp'
 import Results from './components/Results'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
@@ -16,6 +18,7 @@ render(
     <Router history={browserHistory}>
       <Route path="/" component={App}/>
       <Route path="/results" component={Results} />
+      <Route path="/flip" component={Practice5} />
       <Route path='*' component={NotFound} />
     </Router>
   </Provider>,
