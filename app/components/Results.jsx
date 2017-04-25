@@ -1,11 +1,53 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import ResultCard from './ResultCard'
+// import ResultCard from './ResultCard'
+import TransitionGroup from './react-transition-group/src/TransitionGroup'
+import { Front, Back } from './MakeFlip'
 
 //All avatar and card images taken from pixel bay. 
 
 export default class Results extends Component {
+
+    constructor() {
+        super()
+
+        this.state = {
+            shouldShowResult1: true,
+            shouldShowResult2: true,
+            shouldShowResult3: true,
+            shouldShowResult4: true,
+        }
+
+        this.toggle = this.toggle.bind(this)
+    }
+
+//I can't just change all of them at the same time. I have to switch on the specific card. 
+    toggle = (e) => {
+        switch (+e.target.value) {
+            case 1: 
+                this.setState({shouldShowResult1: !this.state.shouldShowResult1})
+                break; 
+            case 2: 
+                this.setState({shouldShowResult2: !this.state.shouldShowResult2})
+                break; 
+            case 3: 
+                this.setState({shouldShowResult3: !this.state.shouldShowResult3})
+                break; 
+            case 4: 
+                this.setState({shouldShowResult4: !this.state.shouldShowResult4})
+                break; 
+        }
+
+        // this.setState({
+        //     shouldShowResult1: !this.state.shouldShowResult1,
+        //     shouldShowResult2: !this.state.shouldShowResult2,
+        //     shouldShowResult3: !this.state.shouldShowResult3,
+        //     shouldShowResult4: !this.state.shouldShowResult4,
+        // })
+        // console.log("clickinnggg", this.state, "ID", e.target.value)
+        // console.log("TARGET", e.target)
+    }
 
     render() {
 
@@ -45,7 +87,7 @@ export default class Results extends Component {
         const color4 = "Brown"
         const length4 = "Med"
 
-        return (
+        /*return (
             <div>
                 <Navbar />
                 <br />
@@ -76,6 +118,67 @@ export default class Results extends Component {
 
                                 <div className="col-md-6">
                                     <ResultCard name={name4} card={card4} avatar={avatar4} price={price4} description={description4} texture={texture4} color={color4} length={length4} />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="col-md-5">
+                            <iframe width="414" height="518" frameBorder="0"
+                                src="https://www.google.com/maps/embed/v1/view?zoom=13&center=40.6602,-73.9690&key=AIzaSyCf9kpJkwxQMPgtx3S-aapY1f-yjUp29N8" allowFullScreen></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        )*/
+
+        return (
+            <div>
+                <Navbar />
+                <br />
+                <div className="container">
+
+                    <div className="row">
+
+                        <div className="col-md-7">
+                            <div className="row">
+
+                                <div className="col-md-6">
+                                    <TransitionGroup >
+                                       {this.state.shouldShowResult1 && <Front toggle={this.toggle} id={1} name={name1} card={card1} avatar={avatar1} price={price1} description={description1} texture={texture1} color={color1} length={length1} /> }
+                                    { !this.state.shouldShowResult1 && <Back toggle={this.toggle} id={1} />}
+                                    </TransitionGroup>
+                                </div>
+
+                                <div className="col-md-6">
+                                    <TransitionGroup >
+                                       {this.state.shouldShowResult2 && <Front toggle={this.toggle} id={2}  name={name2} card={card2} avatar={avatar2} price={price2} description={description2} texture={texture2} color={color2} length={length2} /> }
+
+                                    { !this.state.shouldShowResult2 && <Back toggle={this.toggle}  id={2} />}
+                                    </TransitionGroup>
+                                </div>
+
+                            </div>
+
+                            <br />
+
+                            <div className="row">
+
+                                <div className="col-md-6">
+                                    <TransitionGroup >
+                                       {this.state.shouldShowResult3 && <Front toggle={this.toggle} id={3}  name={name3} card={card3} avatar={avatar3} price={price3} description={description3} texture={texture3} color={color3} length={length3} /> }
+
+                                { !this.state.shouldShowResult3 && <Back toggle={this.toggle} id={3} />}
+                                    </TransitionGroup>
+                                </div>
+
+                                <div className="col-md-6">
+                                    <TransitionGroup >
+                                       {this.state.shouldShowResult4 && <Front toggle={this.toggle} id={4}  name={name4} card={card4} avatar={avatar4} price={price4} description={description4} texture={texture4} color={color4} length={length4} /> }
+
+                                    { !this.state.shouldShowResult4 && <Back toggle={this.toggle} id={4} />}
+                                    </TransitionGroup>
                                 </div>
 
                             </div>

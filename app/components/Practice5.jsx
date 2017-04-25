@@ -18,13 +18,17 @@ function makefadeUp (Component) {
 
     componentWillEnter (callback) {
         const el = findDOMNode(this)
-        TweenMax.fromTo(el, 0.3, {y: 100, opacity: 0}, {y: 0, opacity:1, onComplete: callback})
+        TweenMax.fromTo(el, 2, {rotationY: 180, opacity: 0}, {rotationY: 0, opacity:1, onComplete: callback})
+        // TweenMax.fromTo(el, 2, {transformOrigin:'top', rotationY: -180, opacity: 0}, {rotationY: 0, opacity: 1, onComplete: callback})
+
         console.log(el, "Entering")
     }
 
     componentWillLeave(callback) {
         const el = findDOMNode(this)
-        TweenMax.fromTo(el, 0.3, {y:0, opacity:1}, {y: -100, opacity: 0, onComplete: callback})
+        TweenMax.fromTo(el, 0, {rotationY:0, opacity:0}, {rotationY: -180, opacity: 0, onComplete: callback})
+        // TweenMax.fromTo(el, 0, {rotationY: 0, opacity: 1}, {transformOrigin:'top', rotationY: -180, opacity: 0, onComplete: callback})
+
         console.log(el, "Leaving")
     }
 
@@ -65,7 +69,7 @@ export default class Page extends React.Component {
     <div className="page" >
 
       <TransitionGroup>
-        { this.state.shouldShowResult && <Front/>}
+        { this.state.shouldShowResult && <Front name="Keziyah"/>}
         { this.state.shouldShowReport && <Back/>}
       </TransitionGroup>
 

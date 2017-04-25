@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 //Thanks to material design lite for the cards.  
 export default class ResultCard extends Component {
     render() {
+        console.log("RESULTS CARD", this.props)
+
         const picStyle = {
-            backgroundImage: `url(${this.props.card})` 
+            backgroundImage: `url(${this.props.card})`
         }
 
         const reportUser = <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
@@ -13,25 +15,32 @@ export default class ResultCard extends Component {
                 <div className="mdl-card__title mdl-card--expand" style={picStyle}>
                     <div className="row" id="pic-name">
                         <div className="col-md-8">
-                            <h2 className="mdl-card__title-text">{this.props.name}</h2>
-                        </div>
-                        <div className="col-md-4">
-                            <img className="card-avatar" src={this.props.avatar} alt="profile pic" />
-                        </div>
+                            <h2 className="mdl-card__title-text">{this.props.name}
+                                <button value={this.props.id} id="warning-btn" onClick={this.props.toggle} >x</button>
+                            </h2>
+                    </div>
+                    <div className="col-md-4">
+                        <img className="card-avatar" src={this.props.avatar} alt="profile pic" />
                     </div>
                 </div>
-                <div className="mdl-card__supporting-text">
-                    <p><span className="price">${this.props.price}</span> {this.props.description}</p>
-                </div>
-                <div className="mdl-card__actions mdl-card--border">
-                    <p>{this.props.texture} - {this.props.color} - {this.props.length} <span className="spacer"></span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span className="spacer"></span>
-                    <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                    </p>
-                </div>
             </div>
+            <div className="mdl-card__supporting-text">
+                <p><span className="price">${this.props.price}</span> {this.props.description}</p>
+            </div>
+            <div className="mdl-card__actions mdl-card--border">
+                <p>{this.props.texture} - {this.props.color} - {this.props.length} <span className="spacer"></span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span className="spacer"></span>
+                    <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </p>
+            </div>
+            </div >
         )
     }
 }
+
+
+
+//value={this.props.id} onClick={this.props.toggle}
+
 
 //Testing version
 
