@@ -58,7 +58,8 @@ body:after {
     ),
     /* bottom, image */
     url(hero.png); 
-    height: 500px; 
+    /*height: 500px; */
+    height: 80vh; 
     background-repeat: no-repeat; 
     background-size: cover; 
     margin-top: -60px; 
@@ -126,6 +127,14 @@ body:after {
 
 #hair-tutorial-header {
     font-size: 2em; 
+    font-weight: bold; 
+    color: #cc002d; 
+}
+
+#down {
+    font-size: 3em; 
+    margin-left: 28vw; 
+    margin-top: -10px; 
 }
 
 #weave {
@@ -134,7 +143,9 @@ body:after {
 
 .tutorial-container {
     position: relative; 
-    width: 650px; 
+    /*width: 650px; */
+    width: 100vh; 
+    height: 100vw; 
     margin-left: 30%; 
     margin-top: 3%; 
 }
@@ -152,7 +163,8 @@ body:after {
   z-index: 100;
   position: absolute;
   color: #fdfdfd;
-  font-size: 2em;
+  background: rgba(0, 122, 135, 0.6);
+  font-size: 2.5em;
   font-weight: bold;
   left: 20px;
   top: 0px;
@@ -298,6 +310,81 @@ footer {
     margin: 0 auto; 
 }
 
+/*******************************************/
+/*******************************************/
+        /*PAGE TRANSITIONS!!!!!!!!!*/
+/*******************************************/
+/*******************************************/
+
+/*.move {
+    background-color: rgb(0, 122, 135);
+    height: 100vh; 
+    transition: transform 2s, opacity 2s;
+
+} */
+
+/*.move-appear {
+    opacity: 0; 
+    transform: translate3d(100%, 0, 0); 
+}
+
+    .move-appear.transition-appear-active {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .move-leave {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .move-leave.transition-leave-active {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }*/
+/*
+.anim {
+    animation: anim 1s ease-out 0s 1; 
+}
+
+
+@keyframes anim {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+         transform: translateX(0); 
+    }
+}*/
+
+/*.app {
+    transition-duration: 2s; 
+}*/
+
+/*.transition-appear {
+    opacity: 0;
+    transform: scale3d(2.5, 1.2, 0.3);
+  }
+
+  .transition-appear.transition-appear-active {
+    opacity: 1;
+    transform:  scale3d(0);
+}*/
+
+   .search-enter {
+    width: 0; 
+    /*opacity: 0;*/
+    /*transform: scale3d(0);*/
+ }
+
+  .search-enter.search-enter-active {
+    width: 90%; 
+    transition: width 0.4s ease-in; 
+    /*opacity: 1;
+    transition: opacity 1s ease-in;*/
+    /*transform: translateX(100%) 1s ease-in*/
+  }
+
 
 /*******************************************/
 /*******************************************/
@@ -336,72 +423,81 @@ anim-appear anim appear active: how the animation works and where it ends
 */
 
 /*Conditions for when the search form first appears.*/
-.search-enter {
+.fade-enter {
     opacity: 0.01; 
 }
 
 /*Specify length of time and end result of transition, before
 the search component renders as normal*/
 
-.search-enter.search-enter-active {
+.fade-enter.fade-enter-active {
     opacity: 2; 
-    transition: opacity 1s ease-in;
+    transition: opacity 0.8s ease-in;
 }
 
 /*Conditions for when the search icon first leaves*/
-.search-leave {
+.fade-leave {
     opacity: 2
 }
 
-/*Specify how the search icon should leave before it dissapears*/
-.search-leave.anim-leave-active {
-    opacity: 0.01; 
-    transition: opacity 1s ease-out; 
+.fade-appear {
+    opacity: 0;
+  }
+
+  .fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
 }
 
-/*anim transitions*/
+/*Specify how the search icon should leave before it dissapears*/
+/*.search-leave.anim-leave-active {
+    opacity: 0.01; 
+    transition: opacity 1s ease-out; 
+}*/
+
+/*anim transitions
 /*Notice how I have to set the seconds both here and in the render method of the component*/
 
 /*transitionAppear*/
-.anim-appear {
+/*.anim-appear {
     opacity: 0.01;
-}
+}*/
 
 /*transitionAppearTimeOut*/
 
 /*transition appear is for first loading the page. 
 while transion enter is for things that load after it. */
 
-.anim-appear.anim-appear-active {
+/*.anim-appear.anim-appear-active {
     opacity: 2; 
     transition: opacity 5s ease-in;
-}
+}*/
 
 /*TransitionEnter*/
 /*When the element first appears, in what condition should it start?*/
-.anim-enter {
+/*.anim-enter {
     opacity: 0.01; 
-}
+}*/
 
 /*At what point should the animation stop before it renders as normal?
 Also, how long should this animation take, and how should it animate?
 So here, the animation will ease in, take 3s to get to opacity 0.8, then
 it will render as normal(with full opacity)*/
-.anim-enter.anim-enter-active {
+/*.anim-enter.anim-enter-active {
     opacity: 0.8; 
     transition: opacity 3s ease-in; 
-}
+}*/
 
-/*start the leaving transition*/
+/*start the leaving transition
 .anim-leave {
     opacity: 2
-}
+}*/
 
-/*how to end the leaving transition leaving transition*/
+/*how to end the leaving transition leaving transition
 .anim-leave.anim-leave-active {
     opacity: 0.01; 
     transition: opacity 3s ease-out; 
-}
+}*/
 
 .box, .circle {
     width: 400; 

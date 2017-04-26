@@ -19,7 +19,7 @@ function makeFlip (Component) {
 
     componentWillEnter (callback) {
         const el = findDOMNode(this)
-        TweenMax.fromTo(el, 1, {rotationY: 180, opacity: 0}, 
+        TweenMax.fromTo(el, 0.5, {rotationY: 180, opacity: 0}, 
         {rotationY: 0, opacity:1, onComplete: callback})
     }
 

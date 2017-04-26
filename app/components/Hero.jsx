@@ -14,7 +14,6 @@ class Hero extends Component {
 
     showSearch() {
         this.setState({ shouldShowSearch: true })
-        console.log("showing search")
     }
 
     render() {
@@ -30,7 +29,7 @@ class Hero extends Component {
                         <h4>Boot the bundles. Skip the beauty shop. Buy hair for your next look from people right in your neighborhood.</h4>
                     </div>
                 </div>
-                <CSSTransitionGroup transitionName="search" transitionAppear={false} transitionEnterTimeout={1000} transitionEnter={true} transitionLeave={false}>
+                <CSSTransitionGroup transitionName="search" transitionAppear={false} transitionEnterTimeout={400} transitionEnter={true} transitionLeave={false}>
                     {!this.state.shouldShowSearch && searchIcon}
                     {this.state.shouldShowSearch && <Search />}
                 </CSSTransitionGroup>

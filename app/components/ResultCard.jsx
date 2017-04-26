@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 //Thanks to material design lite for the cards.  
 export default class ResultCard extends Component {
     render() {
-        console.log("RESULTS CARD", this.props)
-
         const picStyle = {
             backgroundImage: `url(${this.props.card})`
         }

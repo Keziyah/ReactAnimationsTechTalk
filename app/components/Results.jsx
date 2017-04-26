@@ -16,7 +16,7 @@ export default class Results extends Component {
             shouldShowResult1: true,
             shouldShowResult2: true,
             shouldShowResult3: true,
-            shouldShowResult4: true,
+            shouldShowResult4: true
         }
 
         this.toggle = this.toggle.bind(this)
@@ -69,7 +69,7 @@ export default class Results extends Component {
         const color2 = "Black"
         const length2 = "Short"
 
-        const name3 = "Xavier"
+        const name3 = "TJ"
         const card3 = "card3.png"
         const avatar3 = "avatar3.png"
         const price3 = 15
@@ -134,7 +134,7 @@ export default class Results extends Component {
         )*/
 
         return (
-            <div>
+            <div className="anim">
                 <Navbar />
                 <br />
                 <div className="container">

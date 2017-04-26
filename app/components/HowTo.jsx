@@ -46,6 +46,7 @@ class HowTo extends Component {
             <div className="container">
                 <div id="tutorial-header">
                     <h1 id="hair-tutorial-header">Hairbnb is revolutionizing the way you shop for hair. Here's how. </h1>
+                    <span id="down" className="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                 </div>
                 <Screen>
                     <ScreenSlice>

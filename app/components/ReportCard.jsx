@@ -15,6 +15,7 @@ const ReportCard = (props) => {
                 <option value="User has lice">User has lice</option>
                 <option value="User is abusive">User is abusive</option>
                 <option value="User is shady">User is shady</option>
+                <option value="User is shady">User has no hair at all</option>
             </select>
             <input type="text" placeholder="Write your complaint here"/>
             <button id="submit-report" value={props.id} onClick={props.toggle.bind()} className="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
