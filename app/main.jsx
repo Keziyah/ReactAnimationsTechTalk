@@ -17,10 +17,10 @@ import NotFound from './components/NotFound'
 
 render(
     <Router history={browserHistory}>
+      <Route path="/page" component={Page} />
       <Route path="/" component={App}>
           <IndexRoute component={Home} />
           <Route path="/results" component={Results} />
-          <Route path="/page" component={Page} />
           <Route path='*' component={NotFound} /> 
       </Route>
     </Router>,

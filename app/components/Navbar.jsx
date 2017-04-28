@@ -16,9 +16,9 @@ class Navbar extends Component {
                             <li><span className="mdl-badge" data-badge="4">Inbox</span></li>
                             <li>Help</li>
                             <li>
-                                <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                                <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"><Link to="/page">
                                     Rent Your Hair
-                                </button>
+                                </Link></button>
                             </li>
                             <li>
                                 <img src="UserImg.png" id="userImg" alt="current logged in user" />

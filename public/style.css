@@ -12,6 +12,11 @@ body:after {
     clear:both;
 }
 
+a, a:hover {
+    text-decoration: none; 
+    color: #efedec; 
+}
+
 
 /*******************************************/
 /*NAVBAR */
@@ -342,9 +347,11 @@ footer {
         opacity: 0;
         transform: translate3d(100%, 0, 0);
     }*/
-/*
+
 .anim {
     animation: anim 1s ease-out 0s 1; 
+    background: rgb(0, 122, 135);
+    height: 100vh; 
 }
 
 
@@ -355,7 +362,7 @@ footer {
     100% {
          transform: translateX(0); 
     }
-}*/
+}
 
 /*.app {
     transition-duration: 2s; 
@@ -439,12 +446,13 @@ the search component renders as normal*/
 .fade-leave {
     opacity: 2
 }
-
+/*When it first appears you can't see anything*/
 .fade-appear {
     opacity: 0;
   }
 
-  .fade-appear.fade-appear-active {
+/*But while it's appearing...*/
+.fade-appear.fade-appear-active {
     opacity: 1;
     transition: opacity 0.8s ease-in;
 }

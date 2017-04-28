@@ -134,7 +134,7 @@ export default class Results extends Component {
         )*/
 
         return (
-            <div className="anim">
+            <div>
                 <Navbar />
                 <br />
                 <div className="container">

@@ -40,7 +40,7 @@ class HowTo extends Component {
         const paragraph3 = "Wear your new hair any way you want. As extensions, as a wig, etc."
         //Card 4
         const image4 = "Tutorial4.png"
-        const header4 = "4. Stunt on these hoes."
+        const header4 = "4. Stunt on 'em."
         const paragraph4 = "Collect compliments and make the haters weep."
         return (
             <div className="container">

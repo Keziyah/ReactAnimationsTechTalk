@@ -25,7 +25,7 @@ class Hero extends Component {
             <div id="heroimg">
                 <div id="hero-text" className="container">
                     <div className="col-md-8">
-                        <h1>New hair don't care.</h1>
+                        <h1>Used hair don't care.</h1>
                         <h4>Boot the bundles. Skip the beauty shop. Buy hair for your next look from people right in your neighborhood.</h4>
                     </div>
                 </div>
